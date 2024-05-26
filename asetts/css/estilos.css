@@ -1,70 +1,93 @@
 /* Estilos base para el menú lateral */
 .menu-lateral {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 100vh;
-    background-color: #f4f4f4;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.menu-lateral a:hover {
+  color: #007bff;
+}
+
+/* Estilos para el logotipo */
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+/* Estilos para dispositivos con un ancho máximo de 600px */
+@media (max-width: 600px) {
+  .menu-lateral {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
   }
-  
-  .menu-lateral a {
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: #333;
-    font-family: Arial, sans-serif;
+  .galeria {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
   }
-  
-  .menu-lateral a:hover {
-    color: #007bff;
-  }
-  
-  /* Estilos para el logotipo */
-  .logo {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+
+  /* Estilos para el logo */
   .logo img {
-    max-width: 100%;
-  }
-    
-  /* Estilos para dispositivos con un ancho máximo de 600px */
-  @media (max-width: 600px) {
-    .menu-lateral {
-      flex-direction: row;
-      width: 100%;
-      height: auto;
-      align-items: center;
-      justify-content: space-around;
-    }
-  
-    /* Estilos para el logo */
-    .logo img {
     width: 100px; /* Ajusta esto según tus necesidades */
     height: auto;
   }
-  }
-  /* Para la galería de imágenes */
+}
+/* Para la galería de imágenes */
 .imagen {
-    filter: grayscale(100%); /* Blanco y negro por defecto */
-    transition: filter 0.5s; /* Transición suave */
-  }
-  
-  .imagen:hover {
-    filter: grayscale(0); /* Color original al pasar el cursor */
-  }
-  /* Estilos para el footer */
+  filter: grayscale(100%); /* Blanco y negro por defecto */
+  transition: filter 0.5s; /* Transición suave */
+}
+
+.imagen:hover {
+  filter: grayscale(0); /* Color original al pasar el cursor */
+}
+/* Estilos para el footer */
 footer {
-    display: flex;
+  display: flex;
+  /* ... más estilos ... */
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
     /* ... más estilos ... */
   }
-  
-  @media (max-width: 600px) {
-    footer {
-      flex-direction: column;
-      /* ... más estilos ... */
-    }
-  }
-  
-  
+}
+
+.galeria{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 3rem auto;
+  width: 80%;
+}
+.card{
+  width: calc(25% - 1rem);
+  text-align: center;
+}
+.card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
